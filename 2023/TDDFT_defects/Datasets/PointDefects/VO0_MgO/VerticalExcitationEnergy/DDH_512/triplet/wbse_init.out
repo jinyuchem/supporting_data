@@ -1,0 +1,398 @@
+
+     --------------------------------------------------------------------------------------------
+     I/O Summary : input_west
+     --------------------------------------------------------------------------------------------
+     qe_prefix : pwscf
+     west_prefix : pwscf
+     outdir : ./
+     --------------------------------------------------------------------------------------------
+
+     --------------------------------------------------------------------------------------------
+     I/O Summary : server_control
+     --------------------------------------------------------------------------------------------
+     document : {}
+     --------------------------------------------------------------------------------------------
+
+     --------------------------------------------------------------------------------------------
+     I/O Summary : wbse_init_control
+     --------------------------------------------------------------------------------------------
+     wbse_init_calculation : S
+     solver : TDDFT
+     bse_method : PDEP
+     n_pdep_eigen_to_use : 4090
+     localization : W
+     wfc_from_qbox : qb_wfc
+     bisection_info : bis_info
+     chi_kernel : CHI
+     overlap_thr : 0.005
+     spin_channel : 0
+     n_trunc_bands : 0
+     o_restart_time : 0.0
+     --------------------------------------------------------------------------------------------
+
+     Program WBSE_INIT v. 5.4.0 git rev. v5.3.0-109-g00a7e99 starts on  5Jun2023 at  7:25:46 
+
+     This program is part of the open-source West suite
+     for massively parallel calculations of excited states in materials; please cite
+         "M. Govoni et al., J. Chem. Theory Comput. 11, 2680 (2015);
+          URL http://www.west-code.org", 
+     in publications or presentations arising from this work.
+
+     Based on the Quantum ESPRESSO v. 7.1
+
+     I/O is Little Endian
+ 
+     --------------------------------------------------------------------------------------------
+     **MPI** Parallelization Status
+     --------------------------------------------------------------------------------------------
+                    32                   4             1             1             8
+     --------------------------------------------------------------------------------------------
+                     N         =         I      X      P      X      B      X      Z
+                     ^                   ^             ^             ^             ^
+                     |                   |             |             |             |
+                   #rnk                  |             |             |             |
+                                      #image           |             |             |
+                                                     #pool           |             |
+                                                                   #bgrp           |
+                                                                                 #R&G
+     --------------------------------------------------------------------------------------------
+     #prc =           32
+     --------------------------------------------------------------------------------------------
+
+     GPU acceleration enabled
+
+     Reading xml data from directory:
+
+     ./pwscf.save/
+     EXX fraction changed:   0.36
+     EXX Screening parameter changed:    0.0000000
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE0
+                           (   6   4   8   4   0   0   0)
+     EXX-fraction              =        0.36
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min        2393    2393    597               249318   249318   31134
+     Max        2398    2398    600               249322   249322   31140
+     Sum       19157   19157   4785              1994569  1994569  249087
+ 
+     Using Slab Decomposition
+ 
+       ** WARNING : EXX-use_ace          = F
+       ** WARNING : EXX-alpha            =       0.360000
+       ** WARNING : EXX-erfc_scrlen      =       0.000000
+       ** WARNING : EXX-gau_scrlen       =       0.000000
+       ** WARNING : EXX-ecutfock         =     240.000000
+       ** WARNING : EXX-exxdiv_treatment = gb            
+     EXX: q-point mesh:     1    1    1
+     EXX: grid of k+q points same as grid of k-points
+
+     EXX grid:   997285 G-vectors     FFT dimensions: ( 160, 160, 160)
+       ** WARNING : EXX-exxdiv           =   -4879.033960
+ 
+     --------------------------------------------------------------------------------------------
+     System Overview
+     --------------------------------------------------------------------------------------------
+     gamma_only           =              T
+     ecutwfc [Ry]         =      60.000000
+     ecutrho [Ry]         =     240.000000
+     omega [au^3]         =   3.177010E+04
+     nbnd                 =           2080
+     nkstot               =              2
+     nspin                =              2
+     nelec                =    4090.000000
+     nelup                =    2045.000000
+     neldw                =    2045.000000
+     npol                 =              1
+     lsda                 =              T
+     noncolin             =              F
+     lspinorb             =              F
+     --------------------------------------------------------------------------------------------
+
+     3DFFT grid
+        s : ( 160, 160, 160)
+        p : ( 160, 160, 160)
+
+     Direct Lattice Cell [a.u.]
+        a1 = (    31.6718098     0.0000000     0.0000000)
+        a2 = (     0.0000000    31.6718098     0.0000000)
+        a3 = (     0.0000000     0.0000000    31.6718098)
+
+     Reciprocal Lattice Cell [a.u.]
+        b1 = (     0.1983842     0.0000000     0.0000000)
+        b2 = (     0.0000000     0.1983842     0.0000000)
+        b3 = (     0.0000000     0.0000000     0.1983842)
+      
+
+     Brillouin Zone sampling [cryst. coord.]
+ 
+        k(000001) = (     0.0000000     0.0000000     0.0000000)
+     Divergence =   1.535731E-01
+ 
+     --------------------------------------------------------------------------------------------
+     Parallelization for wann_local
+     --------------------------------------------------------------------------------------------
+     nglob                =           2045
+     nlevel               =              4
+     Min nglob/nlevel     =            511
+     Max nglob/nlevel     =            512
+     --------------------------------------------------------------------------------------------
+ 
+     --------------------------------------------------------------------------------------------
+     Wannier localization
+     --------------------------------------------------------------------------------------------
+     in progress... |#                   | 005% :               11.0s (E)           03m-40.2s (X)
+     in progress... |##                  | 010% :               22.5s (E)           03m-45.8s (X)
+     in progress... |###                 | 015% :               33.0s (E)           03m-40.3s (X)
+     in progress... |####                | 020% :               44.7s (E)           03m-43.7s (X)
+     in progress... |#####               | 025% :               55.3s (E)           03m-41.3s (X)
+     in progress... |######              | 030% :           01m-06.3s (E)           03m-41.1s (X)
+     in progress... |#######             | 035% :           01m-17.6s (E)           03m-41.8s (X)
+     in progress... |########            | 040% :           01m-28.4s (E)           03m-41.0s (X)
+     in progress... |#########           | 045% :           01m-39.3s (E)           03m-40.8s (X)
+     in progress... |##########          | 050% :           01m-49.8s (E)           03m-39.7s (X)
+     in progress... |###########         | 055% :           02m-01.0s (E)           03m-40.0s (X)
+     in progress... |############        | 060% :           02m-12.1s (E)           03m-40.1s (X)
+     in progress... |#############       | 065% :           02m-22.5s (E)           03m-39.2s (X)
+     in progress... |##############      | 070% :           02m-33.6s (E)           03m-39.5s (X)
+     in progress... |###############     | 075% :           02m-44.3s (E)           03m-39.1s (X)
+     in progress... |################    | 080% :           02m-55.2s (E)           03m-39.0s (X)
+     in progress... |#################   | 085% :           03m-06.2s (E)           03m-39.1s (X)
+     in progress... |##################  | 090% :           03m-17.1s (E)           03m-39.0s (X)
+     in progress... |################### | 095% :           03m-28.2s (E)           03m-39.2s (X)
+     in progress... |####################| 100% :           03m-39.2s (E)           03m-39.2s (X)
+     --------------------------------------------------------------------------------------------
+ 
+     --------------------------------------------------------------------------------------------
+     Wannier overlap
+     --------------------------------------------------------------------------------------------
+     in progress... |#                   | 005% :               38.3s (E)           12m-47.5s (X)
+     in progress... |##                  | 010% :               47.4s (E)           07m-54.4s (X)
+     in progress... |###                 | 015% :               55.6s (E)           06m-10.7s (X)
+     in progress... |####                | 020% :           01m-04.7s (E)           05m-23.7s (X)
+     in progress... |#####               | 025% :           01m-13.0s (E)           04m-52.0s (X)
+     in progress... |######              | 030% :           01m-21.5s (E)           04m-31.9s (X)
+     in progress... |#######             | 035% :           01m-30.3s (E)           04m-18.1s (X)
+     in progress... |########            | 040% :           01m-38.7s (E)           04m-06.9s (X)
+     in progress... |#########           | 045% :           01m-47.3s (E)           03m-58.5s (X)
+     in progress... |##########          | 050% :           01m-55.5s (E)           03m-51.1s (X)
+     in progress... |###########         | 055% :           02m-04.3s (E)           03m-46.0s (X)
+     in progress... |############        | 060% :           02m-13.0s (E)           03m-41.6s (X)
+     in progress... |#############       | 065% :           02m-21.1s (E)           03m-37.1s (X)
+     in progress... |##############      | 070% :           02m-29.9s (E)           03m-34.1s (X)
+     in progress... |###############     | 075% :           02m-38.3s (E)           03m-31.1s (X)
+     in progress... |################    | 080% :           02m-46.9s (E)           03m-28.6s (X)
+     in progress... |#################   | 085% :           02m-55.6s (E)           03m-26.6s (X)
+     in progress... |##################  | 090% :           03m-04.1s (E)           03m-24.6s (X)
+     in progress... |################### | 095% :           03m-12.8s (E)           03m-22.9s (X)
+     in progress... |####################| 100% :           03m-21.4s (E)           03m-21.4s (X)
+     --------------------------------------------------------------------------------------------
+
+     Writing overlap and rotation matrices to ./pwscf.wbse_init.save/o_and_u.1.dat
+ 
+     --------------------------------------------------------------------------------------------
+     Parallelization for n_pairs
+     --------------------------------------------------------------------------------------------
+     nglob                =           5743
+     nlevel               =              4
+     Min nglob/nlevel     =           1435
+     Max nglob/nlevel     =           1436
+     --------------------------------------------------------------------------------------------
+ 
+     --------------------------------------------------------------------------------------------
+     Applying CHI kernel with PDEP
+     --------------------------------------------------------------------------------------------
+     in progress... |#                   | 005% :               00.9s (E)               19.7s (X)
+     in progress... |##                  | 010% :               01.9s (E)               19.6s (X)
+     in progress... |###                 | 015% :               02.9s (E)               19.3s (X)
+     in progress... |####                | 020% :               03.8s (E)               19.1s (X)
+     in progress... |#####               | 025% :               04.7s (E)               19.0s (X)
+     in progress... |######              | 030% :               05.6s (E)               18.9s (X)
+     in progress... |#######             | 035% :               06.6s (E)               18.8s (X)
+     in progress... |########            | 040% :               07.5s (E)               18.8s (X)
+     in progress... |#########           | 045% :               08.4s (E)               18.7s (X)
+     in progress... |##########          | 050% :               09.3s (E)               18.7s (X)
+     in progress... |###########         | 055% :               10.2s (E)               18.6s (X)
+     in progress... |############        | 060% :               11.1s (E)               18.6s (X)
+     in progress... |#############       | 065% :               12.0s (E)               18.5s (X)
+     in progress... |##############      | 070% :               13.0s (E)               18.5s (X)
+     in progress... |###############     | 075% :               13.9s (E)               18.5s (X)
+     in progress... |################    | 080% :               14.8s (E)               18.5s (X)
+     in progress... |#################   | 085% :               15.7s (E)               18.5s (X)
+     in progress... |##################  | 090% :               16.6s (E)               18.5s (X)
+     in progress... |################### | 095% :               17.6s (E)               18.5s (X)
+     in progress... |####################| 100% :               18.5s (E)               18.5s (X)
+     --------------------------------------------------------------------------------------------
+ 
+     --------------------------------------------------------------------------------------------
+     Parallelization for wann_local
+     --------------------------------------------------------------------------------------------
+     nglob                =           2045
+     nlevel               =              4
+     Min nglob/nlevel     =            511
+     Max nglob/nlevel     =            512
+     --------------------------------------------------------------------------------------------
+ 
+     --------------------------------------------------------------------------------------------
+     Wannier localization
+     --------------------------------------------------------------------------------------------
+     in progress... |#                   | 005% :               11.1s (E)           03m-42.0s (X)
+     in progress... |##                  | 010% :               22.6s (E)           03m-46.8s (X)
+     in progress... |###                 | 015% :               33.1s (E)           03m-40.9s (X)
+     in progress... |####                | 020% :               44.8s (E)           03m-44.0s (X)
+     in progress... |#####               | 025% :               55.4s (E)           03m-41.6s (X)
+     in progress... |######              | 030% :           01m-06.4s (E)           03m-41.4s (X)
+     in progress... |#######             | 035% :           01m-17.7s (E)           03m-42.1s (X)
+     in progress... |########            | 040% :           01m-28.6s (E)           03m-41.6s (X)
+     in progress... |#########           | 045% :           01m-39.7s (E)           03m-41.5s (X)
+     in progress... |##########          | 050% :           01m-50.2s (E)           03m-40.5s (X)
+     in progress... |###########         | 055% :           02m-01.4s (E)           03m-40.8s (X)
+     in progress... |############        | 060% :           02m-12.5s (E)           03m-40.8s (X)
+     in progress... |#############       | 065% :           02m-22.9s (E)           03m-39.9s (X)
+     in progress... |##############      | 070% :           02m-34.1s (E)           03m-40.2s (X)
+     in progress... |###############     | 075% :           02m-44.8s (E)           03m-39.8s (X)
+     in progress... |################    | 080% :           02m-55.7s (E)           03m-39.7s (X)
+     in progress... |#################   | 085% :           03m-06.8s (E)           03m-39.8s (X)
+     in progress... |##################  | 090% :           03m-17.6s (E)           03m-39.6s (X)
+     in progress... |################### | 095% :           03m-28.7s (E)           03m-39.7s (X)
+     in progress... |####################| 100% :           03m-39.6s (E)           03m-39.6s (X)
+     --------------------------------------------------------------------------------------------
+ 
+     --------------------------------------------------------------------------------------------
+     Wannier overlap
+     --------------------------------------------------------------------------------------------
+     in progress... |#                   | 005% :               39.1s (E)           13m-03.9s (X)
+     in progress... |##                  | 010% :               48.2s (E)           08m-02.6s (X)
+     in progress... |###                 | 015% :               56.4s (E)           06m-16.4s (X)
+     in progress... |####                | 020% :           01m-05.6s (E)           05m-28.1s (X)
+     in progress... |#####               | 025% :           01m-13.8s (E)           04m-55.4s (X)
+     in progress... |######              | 030% :           01m-22.4s (E)           04m-34.7s (X)
+     in progress... |#######             | 035% :           01m-31.2s (E)           04m-20.6s (X)
+     in progress... |########            | 040% :           01m-39.6s (E)           04m-09.1s (X)
+     in progress... |#########           | 045% :           01m-48.2s (E)           04m-00.5s (X)
+     in progress... |##########          | 050% :           01m-56.4s (E)           03m-52.9s (X)
+     in progress... |###########         | 055% :           02m-05.1s (E)           03m-47.6s (X)
+     in progress... |############        | 060% :           02m-13.8s (E)           03m-43.1s (X)
+     in progress... |#############       | 065% :           02m-22.0s (E)           03m-38.5s (X)
+     in progress... |##############      | 070% :           02m-30.7s (E)           03m-35.4s (X)
+     in progress... |###############     | 075% :           02m-39.1s (E)           03m-32.2s (X)
+     in progress... |################    | 080% :           02m-47.7s (E)           03m-29.6s (X)
+     in progress... |#################   | 085% :           02m-56.3s (E)           03m-27.4s (X)
+     in progress... |##################  | 090% :           03m-04.7s (E)           03m-25.3s (X)
+     in progress... |################### | 095% :           03m-13.4s (E)           03m-23.6s (X)
+     in progress... |####################| 100% :           03m-22.0s (E)           03m-22.0s (X)
+     --------------------------------------------------------------------------------------------
+
+     Writing overlap and rotation matrices to ./pwscf.wbse_init.save/o_and_u.2.dat
+ 
+     --------------------------------------------------------------------------------------------
+     Parallelization for n_pairs
+     --------------------------------------------------------------------------------------------
+     nglob                =           5738
+     nlevel               =              4
+     Min nglob/nlevel     =           1434
+     Max nglob/nlevel     =           1435
+     --------------------------------------------------------------------------------------------
+ 
+     --------------------------------------------------------------------------------------------
+     Applying CHI kernel with PDEP
+     --------------------------------------------------------------------------------------------
+     in progress... |#                   | 005% :               00.7s (E)               15.2s (X)
+     in progress... |##                  | 010% :               01.5s (E)               15.0s (X)
+     in progress... |###                 | 015% :               02.2s (E)               15.0s (X)
+     in progress... |####                | 020% :               02.9s (E)               14.9s (X)
+     in progress... |#####               | 025% :               03.7s (E)               14.9s (X)
+     in progress... |######              | 030% :               04.4s (E)               14.8s (X)
+     in progress... |#######             | 035% :               05.2s (E)               14.8s (X)
+     in progress... |########            | 040% :               05.9s (E)               14.9s (X)
+     in progress... |#########           | 045% :               06.7s (E)               14.9s (X)
+     in progress... |##########          | 050% :               07.4s (E)               14.9s (X)
+     in progress... |###########         | 055% :               08.2s (E)               14.9s (X)
+     in progress... |############        | 060% :               08.9s (E)               14.9s (X)
+     in progress... |#############       | 065% :               09.7s (E)               14.9s (X)
+     in progress... |##############      | 070% :               10.4s (E)               14.9s (X)
+     in progress... |###############     | 075% :               11.1s (E)               14.9s (X)
+     in progress... |################    | 080% :               11.9s (E)               14.8s (X)
+     in progress... |#################   | 085% :               12.6s (E)               14.9s (X)
+     in progress... |##################  | 090% :               13.4s (E)               14.9s (X)
+     in progress... |################### | 095% :               14.1s (E)               14.8s (X)
+     in progress... |####################| 100% :               14.8s (E)               14.8s (X)
+     --------------------------------------------------------------------------------------------
+     WBSE_INIT    :      5h54m CPU      5h54m WALL
+
+     wbse_init_re :      1.51s CPU      2.15s WALL (       1 calls)
+     fetch_input  :      0.26s CPU      0.27s WALL (       2 calls)
+     fft          :      0.08s CPU      0.16s WALL (      14 calls)
+                                        0.11s GPU  (      10 calls)
+     fft_scatter  :      1.56s CPU      1.81s WALL (    2084 calls)
+     init_vloc    :      0.03s CPU      0.03s WALL (       2 calls)
+     init_us_1    :      0.00s CPU      0.00s WALL (       2 calls)
+     v_of_rho     :      0.07s CPU      0.14s WALL (       1 calls)
+     v_xc         :      0.05s CPU      0.12s WALL (       1 calls)
+     a2a_fw       :    160.46s CPU    160.89s WALL ( 1053501 calls)
+     a2a_bw       :      0.34s CPU      0.41s WALL (    2875 calls)
+     v_h          :      0.01s CPU      0.02s WALL (       1 calls)
+     do_setup     :     18.85s CPU     22.49s WALL (       1 calls)
+     init_pw_ar   :     18.85s CPU     22.49s WALL (       1 calls)
+     hinit0       :      0.31s CPU      0.31s WALL (       1 calls)
+     davcio       :      0.01s CPU      1.42s WALL (       6 calls)
+     exx_grid     :      0.00s CPU      0.00s WALL (       1 calls)
+     exxinit      :     15.96s CPU     17.76s WALL (       1 calls)
+     fftcw        :     11.20s CPU     11.92s WALL (    2080 calls)
+     exx_div      :      0.00s CPU      0.00s WALL (       1 calls)
+     sqvc_init    :      0.01s CPU      0.01s WALL (       1 calls)
+     local        :  21208.34s CPU  21211.24s WALL (       2 calls)
+     rscatter_gri :      0.34s CPU      0.34s WALL (      12 calls)
+     wann         :    933.93s CPU    935.80s WALL (       4 calls)
+     fftw         :    418.27s CPU    447.77s WALL ( 1056366 calls)
+                                      440.36s GPU  ( 1056366 calls)
+     jade         :  20273.56s CPU  20274.32s WALL (       2 calls)
+     tau          :     13.02s CPU     33.46s WALL (       2 calls)
+     pdep_write   :      3.08s CPU      6.73s WALL (    2871 calls)
+ 
+     WBSE_INIT    :      5h54m CPU      5h54m WALL
+
+ 
+   This run was terminated on:  13:20:19   5Jun2023            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries
+[CRAYBLAS_WARNING] Application linked against multiple cray-libsci libraries

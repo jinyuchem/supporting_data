@@ -1,0 +1,2187 @@
+
+     Program Wbsepp v. 2.0.1 svn rev. 1002 starts on 10May2023 at 15:50: 4 
+
+     This program is part of the open-source West suite
+     for massively parallel calculations of excited states in materials; please cite
+         "M. Govoni et al., J. Chem. Theory Comput. 11, 2680 (2015);
+          URL http://www.west-code.org", 
+     in publications or presentations arising from this work.
+
+     Based on the Quantum ESPRESSO v. 6.1 svn rev. 13369
+       
+     --------------------------------------------------------------------------------------------
+     **MPI** Parallelization Status                                      
+     --------------------------------------------------------------------------------------------
+                    20                   1             1             1            20
+     --------------------------------------------------------------------------------------------
+                     N         =         I      X      P      X      B      X      Z
+                     ^                   ^             ^             ^             ^
+                     |                   |             |             |             |
+                   #rnk                  |             |             |             |
+                                      #image           |             |             |
+                                                     #pool           |             |
+                                                                   #bgrp           |
+                                                                                 #R&G
+     --------------------------------------------------------------------------------------------
+     #prc =           20
+     --------------------------------------------------------------------------------------------
+       
+     --------------------------------------------------------------------------------------------
+     I/O Summary : input_west                                            
+     --------------------------------------------------------------------------------------------
+     qe_prefix               =          pwscf
+     west_prefix             =           west
+     outdir                  =             ./
+     l_load_qbox_wfc         =              F
+     qbox_ks_wfc_filename    =         qb.xml
+     --------------------------------------------------------------------------------------------
+       
+     --------------------------------------------------------------------------------------------
+     I/O Summary : wbsepp_input                                          
+     --------------------------------------------------------------------------------------------
+     wbsepp_type                    =              6
+     n_plep_read_from_file          =              6
+     l_spin_flipped                 =              F
+
+     Reading data from directory:
+     ./pwscf.save
+
+   Info: using nr1, nr2, nr3 values from input
+
+   Info: using nr1, nr2, nr3 values from input
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation      = PBE ( 1  4  3  4 0 0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         669     669    166                51162    51162    6398
+     Max         672     672    168                51168    51168    6403
+     Sum       13411   13411   3343              1023307  1023307  128013
+ 
+     Generating pointlists ...
+     new r_m :   0.0579 (alat units)  1.6480 (a.u.) for type    1
+     new r_m :   0.0579 (alat units)  1.6480 (a.u.) for type    2
+       
+     --------------------------------------------------------------------------------------------
+     System Overview                                                     
+     --------------------------------------------------------------------------------------------
+     gamma_only           =              T
+     ecutwfc [Ry]         =      60.000000
+     omega [au^3]         =   1.630330E+04
+     glob. #G             =          64007
+     nbnd                 =           1000
+     nkstot               =              2
+     nspin                =              2
+     nelec                =    1994.000000
+     nelup                =     997.000000
+     neldw                =     997.000000
+     npol                 =              1
+     lsda                 =              T
+     noncolin             =              F
+     lspinorb             =              F
+     domag                =              F
+     --------------------------------------------------------------------------------------------
+
+     sFFT G-space:   511654 G-vectors     R-space: ( 144, 144, 144)
+     dFFT G-space:   511654 G-vectors     R-space: ( 144, 144, 144)
+
+     Cell [a.u.]          =      28.461873     14.230936     14.230936
+                          =       0.000000     24.648705      8.216235
+                          =       0.000000      0.000000     23.239022
+      
+     number of ks points=     2
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+        k(    2) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+
+                       cryst. coord.
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+        k(    2) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+ 
+     F. Gygi div      =   1.952680E-01
+
+      band :        1   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        2   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        3   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        4   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        5   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        6   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        7   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        8   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        9   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       10   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       11   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       12   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       13   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       14   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       15   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       16   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       17   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       18   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       19   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       20   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       21   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       22   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       23   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       24   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       25   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       26   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       27   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       28   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       29   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       30   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       31   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       32   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       33   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       34   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       35   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       36   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       37   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       38   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       39   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       40   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       41   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       42   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       43   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       44   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       45   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       46   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       47   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       48   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       49   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       50   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       51   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       52   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       53   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       54   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       55   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       56   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       57   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       58   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       59   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       60   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       61   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       62   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       63   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       64   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       65   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       66   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       67   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       68   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       69   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       70   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       71   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       72   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       73   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       74   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       75   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       76   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       77   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       78   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       79   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       80   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       81   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       82   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       83   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       84   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       85   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       86   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       87   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       88   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       89   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       90   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       91   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       92   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       93   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       94   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       95   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       96   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       97   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       98   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       99   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      100   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      101   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      102   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      103   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      104   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      105   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      106   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      107   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      108   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      109   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      110   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      111   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      112   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      113   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      114   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      115   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      116   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      117   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      118   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      119   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      120   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      121   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      122   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      123   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      124   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      125   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      126   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      127   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      128   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      129   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      130   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      131   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      132   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      133   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      134   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      135   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      136   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      137   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      138   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      139   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      140   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      141   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      142   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      143   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      144   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      145   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      146   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      147   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      148   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      149   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      150   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      151   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      152   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      153   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      154   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      155   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      156   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      157   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      158   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      159   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      160   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      161   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      162   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      163   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      164   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      165   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      166   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      167   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      168   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      169   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      170   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      171   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      172   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      173   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      174   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      175   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      176   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      177   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      178   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      179   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      180   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      181   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      182   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      183   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      184   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      185   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      186   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      187   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      188   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      189   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      190   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      191   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      192   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      193   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      194   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      195   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      196   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      197   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      198   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      199   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      200   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      201   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      202   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      203   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      204   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      205   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      206   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      207   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      208   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      209   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      210   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      211   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      212   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      213   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      214   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      215   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      216   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      217   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      218   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      219   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      220   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      221   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      222   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      223   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      224   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      225   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      226   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      227   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      228   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      229   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      230   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      231   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      232   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      233   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      234   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      235   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      236   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      237   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      238   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      239   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      240   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      241   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      242   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      243   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      244   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      245   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      246   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      247   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      248   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      249   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      250   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      251   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      252   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      253   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      254   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      255   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      256   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      257   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      258   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      259   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      260   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      261   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      262   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      263   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      264   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      265   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      266   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      267   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      268   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      269   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      270   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      271   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      272   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      273   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      274   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      275   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      276   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      277   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      278   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      279   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      280   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      281   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      282   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      283   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      284   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      285   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      286   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      287   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      288   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      289   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      290   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      291   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      292   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      293   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      294   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      295   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      296   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      297   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      298   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      299   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      300   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      301   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      302   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      303   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      304   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      305   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      306   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      307   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      308   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      309   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      310   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      311   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      312   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      313   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      314   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      315   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      316   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      317   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      318   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      319   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      320   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      321   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      322   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      323   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      324   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      325   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      326   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      327   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      328   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      329   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      330   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      331   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      332   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      333   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      334   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      335   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      336   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      337   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      338   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      339   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      340   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      341   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      342   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      343   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      344   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      345   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      346   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      347   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      348   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      349   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      350   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      351   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      352   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      353   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      354   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      355   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      356   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      357   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      358   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      359   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      360   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      361   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      362   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      363   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      364   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      365   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      366   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      367   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      368   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      369   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      370   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      371   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      372   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      373   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      374   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      375   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      376   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      377   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      378   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      379   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      380   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      381   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      382   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      383   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      384   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      385   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      386   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      387   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      388   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      389   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      390   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      391   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      392   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      393   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      394   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      395   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      396   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      397   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      398   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      399   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      400   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      401   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      402   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      403   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      404   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      405   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      406   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      407   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      408   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      409   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      410   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      411   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      412   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      413   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      414   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      415   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      416   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      417   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      418   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      419   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      420   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      421   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      422   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      423   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      424   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      425   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      426   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      427   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      428   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      429   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      430   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      431   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      432   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      433   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      434   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      435   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      436   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      437   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      438   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      439   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      440   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      441   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      442   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      443   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      444   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      445   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      446   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      447   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      448   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      449   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      450   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      451   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      452   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      453   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      454   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      455   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      456   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      457   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      458   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      459   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      460   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      461   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      462   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      463   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      464   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      465   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      466   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      467   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      468   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      469   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      470   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      471   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      472   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      473   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      474   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      475   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      476   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      477   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      478   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      479   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      480   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      481   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      482   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      483   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      484   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      485   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      486   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      487   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      488   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      489   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      490   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      491   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      492   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      493   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      494   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      495   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      496   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      497   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      498   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      499   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      500   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      501   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      502   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      503   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      504   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      505   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      506   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      507   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      508   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      509   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      510   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      511   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      512   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      513   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      514   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      515   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      516   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      517   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      518   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      519   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      520   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      521   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      522   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      523   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      524   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      525   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      526   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      527   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      528   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      529   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      530   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      531   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      532   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      533   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      534   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      535   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      536   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      537   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      538   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      539   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      540   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      541   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      542   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      543   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      544   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      545   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      546   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      547   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      548   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      549   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      550   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      551   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      552   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      553   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      554   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      555   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      556   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      557   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      558   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      559   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      560   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      561   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      562   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      563   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      564   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      565   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      566   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      567   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      568   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      569   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      570   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      571   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      572   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      573   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      574   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      575   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      576   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      577   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      578   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      579   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      580   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      581   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      582   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      583   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      584   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      585   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      586   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      587   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      588   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      589   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      590   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      591   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      592   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      593   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      594   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      595   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      596   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      597   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      598   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      599   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      600   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      601   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      602   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      603   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      604   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      605   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      606   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      607   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      608   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      609   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      610   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      611   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      612   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      613   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      614   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      615   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      616   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      617   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      618   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      619   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      620   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      621   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      622   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      623   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      624   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      625   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      626   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      627   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      628   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      629   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      630   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      631   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      632   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      633   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      634   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      635   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      636   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      637   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      638   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      639   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      640   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      641   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      642   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      643   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      644   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      645   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      646   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      647   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      648   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      649   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      650   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      651   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      652   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      653   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      654   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      655   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      656   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      657   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      658   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      659   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      660   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      661   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      662   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      663   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      664   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      665   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      666   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      667   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      668   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      669   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      670   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      671   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      672   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      673   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      674   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      675   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      676   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      677   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      678   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      679   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      680   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      681   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      682   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      683   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      684   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      685   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      686   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      687   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      688   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      689   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      690   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      691   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      692   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      693   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      694   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      695   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      696   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      697   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      698   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      699   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      700   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      701   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      702   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      703   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      704   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      705   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      706   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      707   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      708   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      709   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      710   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      711   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      712   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      713   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      714   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      715   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      716   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      717   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      718   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      719   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      720   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      721   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      722   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      723   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      724   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      725   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      726   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      727   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      728   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      729   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      730   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      731   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      732   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      733   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      734   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      735   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      736   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      737   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      738   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      739   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      740   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      741   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      742   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      743   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      744   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      745   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      746   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      747   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      748   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      749   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      750   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      751   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      752   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      753   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      754   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      755   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      756   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      757   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      758   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      759   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      760   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      761   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      762   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      763   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      764   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      765   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      766   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      767   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      768   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      769   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      770   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      771   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      772   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      773   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      774   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      775   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      776   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      777   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      778   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      779   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      780   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      781   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      782   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      783   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      784   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      785   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      786   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      787   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      788   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      789   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      790   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      791   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      792   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      793   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      794   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      795   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      796   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      797   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      798   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      799   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      800   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      801   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      802   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      803   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      804   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      805   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      806   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      807   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      808   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      809   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      810   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      811   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      812   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      813   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      814   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      815   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      816   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      817   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      818   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      819   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      820   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      821   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      822   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      823   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      824   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      825   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      826   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      827   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      828   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      829   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      830   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      831   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      832   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      833   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      834   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      835   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      836   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      837   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      838   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      839   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      840   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      841   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      842   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      843   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      844   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      845   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      846   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      847   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      848   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      849   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      850   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      851   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      852   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      853   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      854   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      855   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      856   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      857   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      858   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      859   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      860   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      861   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      862   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      863   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      864   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      865   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      866   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      867   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      868   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      869   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      870   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      871   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      872   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      873   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      874   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      875   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      876   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      877   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      878   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      879   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      880   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      881   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      882   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      883   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      884   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      885   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      886   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      887   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      888   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      889   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      890   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      891   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      892   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      893   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      894   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      895   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      896   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      897   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      898   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      899   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      900   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      901   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      902   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      903   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      904   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      905   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      906   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      907   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      908   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      909   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      910   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      911   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      912   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      913   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      914   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      915   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      916   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      917   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      918   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      919   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      920   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      921   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      922   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      923   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      924   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      925   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      926   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      927   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      928   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      929   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      930   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      931   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      932   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      933   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      934   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      935   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      936   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      937   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      938   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      939   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      940   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      941   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      942   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      943   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      944   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      945   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      946   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      947   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      948   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      949   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      950   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      951   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      952   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      953   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      954   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      955   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      956   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      957   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      958   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      959   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      960   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      961   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      962   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      963   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      964   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      965   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      966   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      967   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      968   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      969   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      970   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      971   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      972   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      973   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      974   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      975   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      976   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      977   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      978   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      979   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      980   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      981   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      982   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      983   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      984   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      985   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      986   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      987   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      988   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      989   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      990   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      991   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      992   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      993   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      994   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      995   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      996   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      997   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      998   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      999   o_alpha :     0.000000   o_beta    0.000000
+
+      band :     1000   o_alpha :     0.000000   o_beta    0.000000
+
+      Ground State n_alpha :   997.000000     n_beta  997.000000
+
+      Ground State <S^2> :     0.000000
+       
+     --------------------------------------------------------------------------------------------
+     Parallelization for nvec                                            
+     --------------------------------------------------------------------------------------------
+     nglob                =              6
+     nlevel               =              1
+     Min nglob/nlevel     =              6
+     Max nglob/nlevel     =              6
+     --------------------------------------------------------------------------------------------
+
+     [MEM] ----------------------------------------------------------
+     [MEM] **Memory** analysis: QE
+     [MEM] ----------------------------------------------------------
+     [MEM] Allocated arrays           est. size (Mb)     dimensions
+     [MEM] ----------------------------------------------------------
+     [MEM] Kohn-Sham Wavefunctions      48.86 Mb     (   3202, 1000)
+     [MEM] NL pseudopotentials          97.33 Mb     (   3202, 1992)
+     [MEM] Each V/rho on FFT grid        2.53 Mb     ( 165888)
+     [MEM] Each G-vector array           0.20 Mb     (  25584)
+     [MEM] G-vector shells               0.02 Mb     (   3176)
+     [MEM] ----------------------------------------------------------
+     [MEM] TOT                         148.94 Mb
+     [MEM] ----------------------------------------------------------
+     [MEM] 
+     [MEM] ----------------------------------------------------------
+     [MEM] **Memory** analysis: WBSE global
+     [MEM] ----------------------------------------------------------
+     [MEM] Allocated arrays           est. size (Mb)     dimensions
+     [MEM] ----------------------------------------------------------
+     [MEM] dvg_exc                     292.27 Mb     (   3202,  997,    6)
+     [MEM] dng_exc                     292.27 Mb     (   3202,  997,    6)
+     [MEM] hr_distr                      0.00 Mb     (      0,    6)
+     [MEM] vr_distr                      0.00 Mb     (      0,    6)
+     [MEM] ----------------------------------------------------------
+     [MEM] TOT                         584.54 Mb
+     [MEM] ----------------------------------------------------------
+     [MEM] 
+     [MEM] ----------------------------------------------------------
+     [MEM] **Memory** analysis: WBSE temporary
+     [MEM] ----------------------------------------------------------
+     [MEM] Allocated arrays           est. size (Mb)     dimensions
+     [MEM] ----------------------------------------------------------
+     [MEM] dvpsi                        48.71 Mb     (   3202,  997)
+     [MEM] dpsi                         48.71 Mb     (   3202,  997)
+     [MEM] ----------------------------------------------------------
+     [MEM] Total estimate               97.42 Mb
+     [MEM] ----------------------------------------------------------
+      
+     --------------------------------------------------------------------------------------------
+     Database read in 54.0s               
+     In location : ./west.wbse.david.save
+     Eigen. found :            6
+     --------------------------------------------------------------------------------------------
+
+      # Exciton : |            1 |   spin flip : |   F
+
+      Ex Energy : |     0.155303 |      D<S^2> : |     2.000000
+
+      # Exciton : |            2 |   spin flip : |   F
+
+      Ex Energy : |     0.168325 |      D<S^2> : |     0.000000
+
+      # Exciton : |            3 |   spin flip : |   F
+
+      Ex Energy : |     0.241454 |      D<S^2> : |     2.000000
+
+      # Exciton : |            4 |   spin flip : |   F
+
+      Ex Energy : |     0.241464 |      D<S^2> : |     1.999990
+
+      # Exciton : |            5 |   spin flip : |   F
+
+      Ex Energy : |     0.241497 |      D<S^2> : |     2.000000
+
+      # Exciton : |            6 |   spin flip : |   F
+
+      Ex Energy : |     0.278444 |      D<S^2> : |     0.000001

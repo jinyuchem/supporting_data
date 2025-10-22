@@ -1,0 +1,777 @@
+
+     Program Wbsepp v. 2.0.1 svn rev. 1002 starts on 10May2023 at 15:46:15 
+
+     This program is part of the open-source West suite
+     for massively parallel calculations of excited states in materials; please cite
+         "M. Govoni et al., J. Chem. Theory Comput. 11, 2680 (2015);
+          URL http://www.west-code.org", 
+     in publications or presentations arising from this work.
+
+     Based on the Quantum ESPRESSO v. 6.1 svn rev. 13369
+       
+     --------------------------------------------------------------------------------------------
+     **MPI** Parallelization Status                                      
+     --------------------------------------------------------------------------------------------
+                    20                   1             1             1            20
+     --------------------------------------------------------------------------------------------
+                     N         =         I      X      P      X      B      X      Z
+                     ^                   ^             ^             ^             ^
+                     |                   |             |             |             |
+                   #rnk                  |             |             |             |
+                                      #image           |             |             |
+                                                     #pool           |             |
+                                                                   #bgrp           |
+                                                                                 #R&G
+     --------------------------------------------------------------------------------------------
+     #prc =           20
+     --------------------------------------------------------------------------------------------
+       
+     --------------------------------------------------------------------------------------------
+     I/O Summary : input_west                                            
+     --------------------------------------------------------------------------------------------
+     qe_prefix               =          pwscf
+     west_prefix             =           west
+     outdir                  =             ./
+     l_load_qbox_wfc         =              F
+     qbox_ks_wfc_filename    =         qb.xml
+     --------------------------------------------------------------------------------------------
+       
+     --------------------------------------------------------------------------------------------
+     I/O Summary : wbsepp_input                                          
+     --------------------------------------------------------------------------------------------
+     wbsepp_type                    =              6
+     n_plep_read_from_file          =              6
+     l_spin_flipped                 =              F
+
+     Reading data from directory:
+     ./pwscf.save
+
+   Info: using nr1, nr2, nr3 values from input
+
+   Info: using nr1, nr2, nr3 values from input
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation      = PBE ( 1  4  3  4 0 0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         246     246     60                13098    13098    1628
+     Max         248     248     62                13108    13108    1642
+     Sum        4949    4949   1229               262059   262059   32675
+ 
+     Generating pointlists ...
+     new r_m :   0.1018 (alat units)  1.6389 (a.u.) for type    1
+     new r_m :   0.1018 (alat units)  1.6389 (a.u.) for type    2
+       
+     --------------------------------------------------------------------------------------------
+     System Overview                                                     
+     --------------------------------------------------------------------------------------------
+     gamma_only           =              T
+     ecutwfc [Ry]         =      60.000000
+     omega [au^3]         =   4.173644E+03
+     glob. #G             =          16338
+     nbnd                 =            280
+     nkstot               =              2
+     nspin                =              2
+     nelec                =     506.000000
+     nelup                =     253.000000
+     neldw                =     253.000000
+     npol                 =              1
+     lsda                 =              T
+     noncolin             =              F
+     lspinorb             =              F
+     domag                =              F
+     --------------------------------------------------------------------------------------------
+
+     sFFT G-space:   131030 G-vectors     R-space: (  80,  80,  80)
+     dFFT G-space:   131030 G-vectors     R-space: (  80,  80,  80)
+
+     Cell [a.u.]          =      16.100467      0.000000      0.000000
+                          =       0.000000     16.100467      0.000000
+                          =       0.000000      0.000000     16.100467
+      
+     number of ks points=     2
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+        k(    2) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+
+                       cryst. coord.
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+        k(    2) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+ 
+     F. Gygi div      =   3.020992E-01
+
+      band :        1   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        2   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        3   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        4   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        5   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        6   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        7   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        8   o_alpha :     1.000000   o_beta    1.000000
+
+      band :        9   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       10   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       11   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       12   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       13   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       14   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       15   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       16   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       17   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       18   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       19   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       20   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       21   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       22   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       23   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       24   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       25   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       26   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       27   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       28   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       29   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       30   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       31   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       32   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       33   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       34   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       35   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       36   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       37   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       38   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       39   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       40   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       41   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       42   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       43   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       44   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       45   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       46   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       47   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       48   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       49   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       50   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       51   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       52   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       53   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       54   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       55   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       56   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       57   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       58   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       59   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       60   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       61   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       62   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       63   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       64   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       65   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       66   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       67   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       68   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       69   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       70   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       71   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       72   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       73   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       74   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       75   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       76   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       77   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       78   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       79   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       80   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       81   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       82   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       83   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       84   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       85   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       86   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       87   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       88   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       89   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       90   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       91   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       92   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       93   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       94   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       95   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       96   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       97   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       98   o_alpha :     1.000000   o_beta    1.000000
+
+      band :       99   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      100   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      101   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      102   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      103   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      104   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      105   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      106   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      107   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      108   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      109   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      110   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      111   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      112   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      113   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      114   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      115   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      116   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      117   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      118   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      119   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      120   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      121   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      122   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      123   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      124   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      125   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      126   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      127   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      128   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      129   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      130   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      131   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      132   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      133   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      134   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      135   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      136   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      137   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      138   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      139   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      140   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      141   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      142   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      143   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      144   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      145   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      146   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      147   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      148   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      149   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      150   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      151   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      152   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      153   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      154   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      155   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      156   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      157   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      158   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      159   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      160   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      161   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      162   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      163   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      164   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      165   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      166   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      167   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      168   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      169   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      170   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      171   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      172   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      173   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      174   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      175   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      176   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      177   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      178   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      179   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      180   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      181   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      182   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      183   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      184   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      185   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      186   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      187   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      188   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      189   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      190   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      191   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      192   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      193   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      194   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      195   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      196   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      197   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      198   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      199   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      200   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      201   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      202   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      203   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      204   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      205   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      206   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      207   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      208   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      209   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      210   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      211   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      212   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      213   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      214   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      215   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      216   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      217   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      218   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      219   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      220   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      221   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      222   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      223   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      224   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      225   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      226   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      227   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      228   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      229   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      230   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      231   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      232   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      233   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      234   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      235   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      236   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      237   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      238   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      239   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      240   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      241   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      242   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      243   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      244   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      245   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      246   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      247   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      248   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      249   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      250   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      251   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      252   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      253   o_alpha :     1.000000   o_beta    1.000000
+
+      band :      254   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      255   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      256   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      257   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      258   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      259   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      260   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      261   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      262   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      263   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      264   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      265   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      266   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      267   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      268   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      269   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      270   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      271   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      272   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      273   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      274   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      275   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      276   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      277   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      278   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      279   o_alpha :     0.000000   o_beta    0.000000
+
+      band :      280   o_alpha :     0.000000   o_beta    0.000000
+
+      Ground State n_alpha :   253.000000     n_beta  253.000000
+
+      Ground State <S^2> :     0.000000
+       
+     --------------------------------------------------------------------------------------------
+     Parallelization for nvec                                            
+     --------------------------------------------------------------------------------------------
+     nglob                =              6
+     nlevel               =              1
+     Min nglob/nlevel     =              6
+     Max nglob/nlevel     =              6
+     --------------------------------------------------------------------------------------------
+
+     [MEM] ----------------------------------------------------------
+     [MEM] **Memory** analysis: QE
+     [MEM] ----------------------------------------------------------
+     [MEM] Allocated arrays           est. size (Mb)     dimensions
+     [MEM] ----------------------------------------------------------
+     [MEM] Kohn-Sham Wavefunctions       3.50 Mb     (    819,  280)
+     [MEM] NL pseudopotentials           6.30 Mb     (    819,  504)
+     [MEM] Each V/rho on FFT grid        0.39 Mb     (  25600)
+     [MEM] Each G-vector array           0.05 Mb     (   6554)
+     [MEM] G-vector shells               0.01 Mb     (   1078)
+     [MEM] ----------------------------------------------------------
+     [MEM] TOT                          10.25 Mb
+     [MEM] ----------------------------------------------------------
+     [MEM] 
+     [MEM] ----------------------------------------------------------
+     [MEM] **Memory** analysis: WBSE global
+     [MEM] ----------------------------------------------------------
+     [MEM] Allocated arrays           est. size (Mb)     dimensions
+     [MEM] ----------------------------------------------------------
+     [MEM] dvg_exc                      18.97 Mb     (    819,  253,    6)
+     [MEM] dng_exc                      18.97 Mb     (    819,  253,    6)
+     [MEM] hr_distr                      0.00 Mb     (      0,    6)
+     [MEM] vr_distr                      0.00 Mb     (      0,    6)
+     [MEM] ----------------------------------------------------------
+     [MEM] TOT                          37.94 Mb
+     [MEM] ----------------------------------------------------------
+     [MEM] 
+     [MEM] ----------------------------------------------------------
+     [MEM] **Memory** analysis: WBSE temporary
+     [MEM] ----------------------------------------------------------
+     [MEM] Allocated arrays           est. size (Mb)     dimensions
+     [MEM] ----------------------------------------------------------
+     [MEM] dvpsi                         3.16 Mb     (    819,  253)
+     [MEM] dpsi                          3.16 Mb     (    819,  253)
+     [MEM] ----------------------------------------------------------
+     [MEM] Total estimate                6.32 Mb
+     [MEM] ----------------------------------------------------------
+      
+     --------------------------------------------------------------------------------------------
+     Database read in 03.9s               
+     In location : ./west.wbse.david.save
+     Eigen. found :            6
+     --------------------------------------------------------------------------------------------
+
+      # Exciton : |            1 |   spin flip : |   F
+
+      Ex Energy : |     0.192272 |      D<S^2> : |     2.000000
+
+      # Exciton : |            2 |   spin flip : |   F
+
+      Ex Energy : |     0.231296 |      D<S^2> : |     0.000000
+
+      # Exciton : |            3 |   spin flip : |   F
+
+      Ex Energy : |     0.278428 |      D<S^2> : |     2.000000
+
+      # Exciton : |            4 |   spin flip : |   F
+
+      Ex Energy : |     0.278428 |      D<S^2> : |     1.999997
+
+      # Exciton : |            5 |   spin flip : |   F
+
+      Ex Energy : |     0.278428 |      D<S^2> : |     1.999997
+
+      # Exciton : |            6 |   spin flip : |   F
+
+      Ex Energy : |     0.368980 |      D<S^2> : |     0.000000
+ 
+     Wbsepp       :     7.37s CPU         9.52s WALL
+
+     wbsepp_readi :      1.17s CPU      1.96s WALL (       1 calls)
+     wbsepp_fetch :      0.00s CPU      0.00s WALL (       1 calls)
+     read_xml     :      0.68s CPU      0.86s WALL (       1 calls)
+     init_vloc    :      0.02s CPU      0.02s WALL (       2 calls)
+     fft          :      0.02s CPU      0.02s WALL (      19 calls)
+     fft_scatter  :      0.01s CPU      0.01s WALL (      19 calls)
+     v_of_rho     :      0.04s CPU      0.04s WALL (       1 calls)
+     v_xc         :      0.04s CPU      0.04s WALL (       1 calls)
+     v_h          :      0.00s CPU      0.00s WALL (       1 calls)
+     read_wave    :      0.49s CPU      1.09s WALL (       1 calls)
+     davcio       :      0.00s CPU      0.09s WALL (       5 calls)
+     init_us_1    :      0.00s CPU      0.01s WALL (       2 calls)
+     do_setup     :      0.02s CPU      0.02s WALL (       1 calls)
+     init_pw_ar   :      0.02s CPU      0.02s WALL (       1 calls)
+     init_at_1    :      0.00s CPU      0.00s WALL (       1 calls)
+     storesqvc    :      0.00s CPU      0.00s WALL (       1 calls)
+     compute_spin :      6.18s CPU      7.53s WALL (       1 calls)
+     plep_db      :      2.66s CPU      3.91s WALL (       1 calls)
+ 
+     Wbsepp       :     7.37s CPU         9.52s WALL
+
+ 
+   This run was terminated on:  15:46:24  10May2023            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

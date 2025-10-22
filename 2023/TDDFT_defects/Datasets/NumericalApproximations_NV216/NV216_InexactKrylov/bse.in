@@ -1,0 +1,22 @@
+input_west:
+  qe_prefix: test
+  west_prefix: test
+  outdir: ./
+
+wbse_init_control:
+  wbse_init_calculation: S
+  solver: TDDFT
+
+wbse_control:
+  wbse_calculation: D
+  n_liouville_eigen: 2
+  n_liouville_times: 20
+  n_liouville_maxiter: 1000
+  trev_liouville: 0.00000001
+  trev_liouville_rel: 0.000001
+  l_forces: True
+  forces_state: 1
+  forces_inexact_krylov: 3
+  forces_inexact_krylov_tr: 0.00000001
+  n_exx_lowrank: 0
+  n_steps_write_restart: -1

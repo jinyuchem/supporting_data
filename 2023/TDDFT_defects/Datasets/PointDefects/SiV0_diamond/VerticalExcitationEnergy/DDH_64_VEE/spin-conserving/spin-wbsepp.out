@@ -1,0 +1,235 @@
+
+     Program Wbsepp v. 2.0.1 svn rev. 1002 starts on  7Dec2021 at 23:57:39 
+
+     This program is part of the open-source West suite
+     for massively parallel calculations of excited states in materials; please cite
+         "M. Govoni et al., J. Chem. Theory Comput. 11, 2680 (2015);
+          URL http://www.west-code.org", 
+     in publications or presentations arising from this work.
+
+     Based on the Quantum ESPRESSO v. 6.1 svn rev. 13369
+       
+     --------------------------------------------------------------------------------------------
+     **MPI** Parallelization Status                                      
+     --------------------------------------------------------------------------------------------
+                    56                   1             1             1            56
+     --------------------------------------------------------------------------------------------
+                     N         =         I      X      P      X      B      X      Z
+                     ^                   ^             ^             ^             ^
+                     |                   |             |             |             |
+                   #rnk                  |             |             |             |
+                                      #image           |             |             |
+                                                     #pool           |             |
+                                                                   #bgrp           |
+                                                                                 #R&G
+     --------------------------------------------------------------------------------------------
+     #prc =           56
+     --------------------------------------------------------------------------------------------
+       
+     --------------------------------------------------------------------------------------------
+     I/O Summary : input_west                                            
+     --------------------------------------------------------------------------------------------
+     qe_prefix               =          pwscf
+     west_prefix             =           west
+     outdir                  =             ./
+     l_load_qbox_wfc         =              F
+     qbox_ks_wfc_filename    =         qb.xml
+     --------------------------------------------------------------------------------------------
+       
+     --------------------------------------------------------------------------------------------
+     I/O Summary : wbsepp_input                                          
+     --------------------------------------------------------------------------------------------
+     wbsepp_type                    =              6
+     n_plep_read_from_file          =             10
+     l_spin_flipped                 =              F
+
+     Reading data from directory:
+     ./pwscf.save
+
+   Info: using nr1, nr2, nr3 values from input
+
+   Info: using nr1, nr2, nr3 values from input
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation      = PBE0 ( 6  4  8  4 0 0)
+     EXX-fraction              =        0.25
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          60      60     13                 2700     2700     330
+     Max          62      62     16                 2718     2718     344
+     Sum        3433    3433    861               151635   151635   18949
+ 
+     Generating pointlists ...
+     new r_m :   0.0876 (alat units)  1.1759 (a.u.) for type    1
+     new r_m :   0.1152 (alat units)  1.5451 (a.u.) for type    2
+     EXX fraction changed:   0.18
+     EXX Screening parameter changed:    0.0000000
+     EXX Gau parameter changed:    0.0000000
+       ** WARNING : EXX-alpha            =       0.180000
+       ** WARNING : EXX-erfc_scrlen      =       0.000000
+       ** WARNING : EXX-gau_scrlen       =       0.000000
+       ** WARNING : EXX-ecutfock         =     120.000000
+       ** WARNING : EXX-exxdiv_treatment = gb            
+EXX: grid of k+q points same as grid of k-points
+       ** WARNING : EXX-exxdiv           =    -875.593469
+       
+     --------------------------------------------------------------------------------------------
+     System Overview                                                     
+     --------------------------------------------------------------------------------------------
+     gamma_only           =              T
+     ecutwfc [Ry]         =      60.000000
+     omega [au^3]         =   2.415303E+03
+     glob. #G             =           9475
+     nbnd                 =            132
+     nkstot               =              2
+     nspin                =              2
+     nelec                =     252.000000
+     nelup                =     127.000000
+     neldw                =     125.000000
+     npol                 =              1
+     lsda                 =              T
+     noncolin             =              F
+     lspinorb             =              F
+     domag                =              F
+     --------------------------------------------------------------------------------------------
+
+     sFFT G-space:    75818 G-vectors     R-space: (  72,  72,  72)
+     dFFT G-space:    75818 G-vectors     R-space: (  72,  72,  72)
+
+     Cell [a.u.]          =      13.417056      0.000000      0.000000
+                          =       0.000000     13.417056      0.000000
+                          =       0.000000      0.000000     13.417056
+      
+     number of ks points=     2
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+        k(    2) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+
+                       cryst. coord.
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+        k(    2) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+ 
+     F. Gygi div      =   3.625191E-01
+       
+     --------------------------------------------------------------------------------------------
+     Parallelization for nvec                                            
+     --------------------------------------------------------------------------------------------
+     nglob                =             10
+     nlevel               =              1
+     Min nglob/nlevel     =             10
+     Max nglob/nlevel     =             10
+     --------------------------------------------------------------------------------------------
+       
+     --------------------------------------------------------------------------------------------
+     Parallelization for band_paralel                                    
+     --------------------------------------------------------------------------------------------
+     nglob                =            127
+     nlevel               =              1
+     Min nglob/nlevel     =            127
+     Max nglob/nlevel     =            127
+     --------------------------------------------------------------------------------------------
+
+     [MEM] ----------------------------------------------------------
+     [MEM] **Memory** analysis: QE
+     [MEM] ----------------------------------------------------------
+     [MEM] Allocated arrays           est. size (Mb)     dimensions
+     [MEM] ----------------------------------------------------------
+     [MEM] Kohn-Sham Wavefunctions       0.34 Mb     (    167,  132)
+     [MEM] NL pseudopotentials           1.28 Mb     (    167,  504)
+     [MEM] Each V/rho on FFT grid        0.16 Mb     (  10368)
+     [MEM] Each G-vector array           0.01 Mb     (   1358)
+     [MEM] G-vector shells               0.00 Mb     (    476)
+     [MEM] ----------------------------------------------------------
+     [MEM] TOT                           1.79 Mb
+     [MEM] ----------------------------------------------------------
+     [MEM] 
+     [MEM] ----------------------------------------------------------
+     [MEM] **Memory** analysis: WBSE global
+     [MEM] ----------------------------------------------------------
+     [MEM] Allocated arrays           est. size (Mb)     dimensions
+     [MEM] ----------------------------------------------------------
+     [MEM] dvg_exc                       3.24 Mb     (    167,  127,   10)
+     [MEM] dng_exc                       3.24 Mb     (    167,  127,   10)
+     [MEM] hr_distr                      0.00 Mb     (      0,   10)
+     [MEM] vr_distr                      0.00 Mb     (      0,   10)
+     [MEM] ----------------------------------------------------------
+     [MEM] TOT                           6.47 Mb
+     [MEM] ----------------------------------------------------------
+     [MEM] 
+     [MEM] ----------------------------------------------------------
+     [MEM] **Memory** analysis: WBSE temporary
+     [MEM] ----------------------------------------------------------
+     [MEM] Allocated arrays           est. size (Mb)     dimensions
+     [MEM] ----------------------------------------------------------
+     [MEM] dvpsi                         0.32 Mb     (    167,  127)
+     [MEM] dpsi                          0.32 Mb     (    167,  127)
+     [MEM] ----------------------------------------------------------
+     [MEM] Total estimate                0.65 Mb
+     [MEM] ----------------------------------------------------------
+      
+     --------------------------------------------------------------------------------------------
+     Database read in 03.8s               
+     In location : ./west.wbse.david.save
+     Eigen. found :           10
+     --------------------------------------------------------------------------------------------
+
+      Ground State <S^2> :     2.008945
+
+      #     Exciton : |        1 |   D<S^2> : |     0.001036
+
+      #     Exciton : |        2 |   D<S^2> : |     0.001036
+
+      #     Exciton : |        3 |   D<S^2> : |    -0.001196
+
+      #     Exciton : |        4 |   D<S^2> : |     0.000286
+
+      #     Exciton : |        5 |   D<S^2> : |     0.000286
+
+      #     Exciton : |        6 |   D<S^2> : |     0.000742
+
+      #     Exciton : |        7 |   D<S^2> : |     0.001639
+
+      #     Exciton : |        8 |   D<S^2> : |     0.001639
+
+      #     Exciton : |        9 |   D<S^2> : |     0.000842
+
+      #     Exciton : |       10 |   D<S^2> : |     0.002093
+ 
+     Wbsepp       :     3.33s CPU         5.74s WALL
+
+     wbsepp_readi :      0.78s CPU      1.59s WALL (       1 calls)
+     wbsepp_fetch :      0.00s CPU      0.00s WALL (       1 calls)
+     read_xml     :      0.42s CPU      0.71s WALL (       1 calls)
+     init_vloc    :      0.01s CPU      0.01s WALL (       2 calls)
+     fft          :      0.01s CPU      0.02s WALL (      19 calls)
+     fft_scatter  :      0.03s CPU      0.03s WALL (     151 calls)
+     v_of_rho     :      0.01s CPU      0.02s WALL (       1 calls)
+     v_xc         :      0.01s CPU      0.02s WALL (       1 calls)
+     v_h          :      0.00s CPU      0.00s WALL (       1 calls)
+     read_wave    :      0.36s CPU      0.87s WALL (       1 calls)
+     davcio       :      0.00s CPU      0.01s WALL (       7 calls)
+     init_us_1    :      0.02s CPU      0.02s WALL (       2 calls)
+     do_setup     :      0.08s CPU      0.09s WALL (       1 calls)
+     init_pw_ar   :      0.05s CPU      0.06s WALL (       1 calls)
+     init_at_1    :      0.00s CPU      0.00s WALL (       1 calls)
+     exx_grid     :      0.00s CPU      0.00s WALL (       1 calls)
+     exxinit      :      0.03s CPU      0.04s WALL (       1 calls)
+     fftcw        :      0.02s CPU      0.03s WALL (     132 calls)
+     exx_div      :      0.00s CPU      0.00s WALL (       1 calls)
+     storesqvc    :      0.00s CPU      0.00s WALL (       1 calls)
+     compute_spin :      2.47s CPU      4.04s WALL (       1 calls)
+     plep_db      :      2.33s CPU      3.90s WALL (       1 calls)
+ 
+     Wbsepp       :     3.33s CPU         5.74s WALL
+
+ 
+   This run was terminated on:  23:57:44   7Dec2021            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

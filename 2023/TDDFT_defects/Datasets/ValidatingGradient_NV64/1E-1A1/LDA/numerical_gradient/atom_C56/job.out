@@ -1,0 +1,9 @@
+Loading intel/19.1.1
+  ERROR: Module cannot be loaded due to a conflict.
+    HINT: Might try "module unload intel" first.
+Loading intelmpi/2019.up7+intel-19.1.1
+  ERROR: Module cannot be loaded due to a conflict.
+    HINT: Might try "module unload intelmpi" first.
+Loading mkl/2020.up1
+  ERROR: Module cannot be loaded due to a conflict.
+    HINT: Might try "module unload mkl" first.

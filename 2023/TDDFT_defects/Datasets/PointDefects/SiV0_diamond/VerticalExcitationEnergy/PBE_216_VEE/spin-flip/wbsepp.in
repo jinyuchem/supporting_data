@@ -1,0 +1,10 @@
+&INPUT_WEST
+/
+&WBSEPP_INPUT
+    wbsepp_type = 6
+    n_plep_read_from_file = 12
+!    macropol_dfpt = .false.
+    l_spin_flipped = .true.
+!    l_exc_plot = true
+!    l_exc_rho_res_plot = true
+/

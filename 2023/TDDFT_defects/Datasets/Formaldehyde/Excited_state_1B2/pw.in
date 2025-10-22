@@ -1,0 +1,41 @@
+&control
+    calculation = 'scf',
+    prefix='pwscf',
+    pseudo_dir='/home/jinyuchem/program/QE/pseudo-potential',
+    outdir = './',
+    verbosity='high',
+    tprnfor=.TRUE.,
+    tstress=.TRUE.,
+    forc_conv_thr=0.000039
+    wf_collect=.true.
+/
+&system
+    ibrav=0,
+    nat=4
+    ntyp= 3,
+    ecutwfc = 90,
+    nbnd = 10
+/
+&electrons
+    diago_full_acc=.true.,
+    conv_thr=1.0D-8
+/
+&ions
+    ion_dynamics='bfgs'
+ /
+ &cell
+ /
+ATOMIC_SPECIES
+C 12.0107  C_ONCV_PBE-1.0.upf
+H 1.0079  H_ONCV_PBE-1.0.upf
+O 16.00  O_ONCV_PBE-1.0.upf
+K_POINTS gamma
+CELL_PARAMETERS {angstrom}
+20 0 0
+0 20 0
+0 0 20
+ATOMIC_POSITIONS {crystal}
+C    0.473243933573    0.499992876472    0.500000388786
+H    0.446273522538    0.451310204686    0.499998616054
+H    0.446270318211    0.548694739427    0.500000916574
+O    0.533340224013    0.500002376242    0.500000105227

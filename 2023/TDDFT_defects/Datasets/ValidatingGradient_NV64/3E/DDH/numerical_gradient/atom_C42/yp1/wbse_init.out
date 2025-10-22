@@ -1,0 +1,238 @@
+MPI startup(): shm:dapl fabric is unknown or has been removed from the product, please use ofi or shm:ofi instead.
+
+     Program WBSE_INIT v. 5.4.0 git rev. v5.3.0-138-g3c816dd starts on 13Aug2023 at  5: 3:24 
+
+     This program is part of the open-source West suite
+     for massively parallel calculations of excited states in materials; please cite
+         "M. Govoni et al., J. Chem. Theory Comput. 11, 2680 (2015);
+          URL http://www.west-code.org", 
+     in publications or presentations arising from this work.
+
+     Based on the Quantum ESPRESSO v. 7.2
+
+     I/O is Little Endian
+ 
+     --------------------------------------------------------------------------------------------
+     **MPI** Parallelization Status
+     --------------------------------------------------------------------------------------------
+                    80                   2             1             1            40
+     --------------------------------------------------------------------------------------------
+                     N         =         I      X      P      X      B      X      Z
+                     ^                   ^             ^             ^             ^
+                     |                   |             |             |             |
+                   #rnk                  |             |             |             |
+                                      #image           |             |             |
+                                                     #pool           |             |
+                                                                   #bgrp           |
+                                                                                 #R&G
+     --------------------------------------------------------------------------------------------
+     **OPENMP** Parallelization Status
+     #thr/rnk               =            1
+     --------------------------------------------------------------------------------------------
+     #prc = (rnk) * (thr) =           80
+     --------------------------------------------------------------------------------------------
+
+     --------------------------------------------------------------------------------------------
+     I/O Summary : input_west
+     --------------------------------------------------------------------------------------------
+     qe_prefix : pwscf
+     west_prefix : pwscf
+     outdir : ./
+     --------------------------------------------------------------------------------------------
+
+     Reading xml data from directory:
+
+     ./pwscf.save/
+     EXX fraction changed:   0.18
+     EXX Screening parameter changed:    0.0000000
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE0
+                           (   6   4   8   4   0   0   0)
+     EXX-fraction              =        0.18
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          85      85     20                 3840     3840     472
+     Max          88      88     22                 3848     3848     490
+     Sum        3489    3489    869               153699   153699   19309
+ 
+     Using Slab Decomposition
+ 
+
+     --------------------------------------------------------------------------------------------
+     I/O Summary : server_control
+     --------------------------------------------------------------------------------------------
+     document : {}
+     --------------------------------------------------------------------------------------------
+
+     --------------------------------------------------------------------------------------------
+     I/O Summary : wbse_init_control
+     --------------------------------------------------------------------------------------------
+     wbse_init_calculation : S
+     solver : TDDFT
+     bse_method : PDEP
+     n_pdep_eigen_to_use : 254
+     localization : N
+     wfc_from_qbox : qb_wfc
+     bisection_info : bis_info
+     chi_kernel : CHI
+     overlap_thr : 0.0
+     spin_channel : 0
+     n_trunc_bands : 0
+     o_restart_time : 0.0
+     --------------------------------------------------------------------------------------------
+       ** WARNING : EXX-use_ace          = F
+       ** WARNING : EXX-alpha            =       0.180000
+       ** WARNING : EXX-erfc_scrlen      =       0.000000
+       ** WARNING : EXX-gau_scrlen       =       0.000000
+       ** WARNING : EXX-ecutfock         =     240.000000
+       ** WARNING : EXX-exxdiv_treatment = gb            
+     EXX: q-point mesh:     1    1    1
+     EXX: grid of k+q points same as grid of k-points
+
+     EXX grid:    76850 G-vectors     FFT dimensions: (  72,  72,  72)
+       ** WARNING : EXX-exxdiv           =    -884.495230
+ 
+     --------------------------------------------------------------------------------------------
+     System Overview
+     --------------------------------------------------------------------------------------------
+     gamma_only           =              T
+     ecutwfc [Ry]         =      60.000000
+     ecutrho [Ry]         =     240.000000
+     omega [au^3]         =   2.452230E+03
+     nbnd                 =            150
+     nkstot               =              2
+     nspin                =              2
+     nelec                =     254.000000
+     nelup                =     128.000000
+     neldw                =     126.000000
+     npol                 =              1
+     lsda                 =              T
+     noncolin             =              F
+     lspinorb             =              F
+     --------------------------------------------------------------------------------------------
+
+     3DFFT grid
+        s : (  72,  72,  72)
+        p : (  72,  72,  72)
+
+     Direct Lattice Cell [a.u.]
+        a1 = (    13.4850856     0.0000000     0.0000000)
+        a2 = (     0.0000000    13.4850856     0.0000000)
+        a3 = (     0.0000000     0.0000000    13.4850856)
+
+     Reciprocal Lattice Cell [a.u.]
+        b1 = (     0.4659359     0.0000000     0.0000000)
+        b2 = (     0.0000000     0.4659359     0.0000000)
+        b3 = (     0.0000000     0.0000000     0.4659359)
+      
+
+     Brillouin Zone sampling [cryst. coord.]
+ 
+        k(000001) = (     0.0000000     0.0000000     0.0000000)
+     Divergence =   3.606902E-01
+ 
+     --------------------------------------------------------------------------------------------
+     Parallelization for n_pairs
+     --------------------------------------------------------------------------------------------
+     nglob                =           8256
+     nlevel               =              2
+     Min nglob/nlevel     =           4128
+     Max nglob/nlevel     =           4128
+     --------------------------------------------------------------------------------------------
+ 
+     --------------------------------------------------------------------------------------------
+     Applying CHI kernel with PDEP
+     --------------------------------------------------------------------------------------------
+     in progress... |#                   | 005% :               01.5s (E)               31.3s (X)
+     in progress... |##                  | 010% :               02.9s (E)               29.9s (X)
+     in progress... |###                 | 015% :               04.4s (E)               29.7s (X)
+     in progress... |####                | 020% :               05.6s (E)               28.3s (X)
+     in progress... |#####               | 025% :               07.1s (E)               28.4s (X)
+     in progress... |######              | 030% :               08.4s (E)               28.2s (X)
+     in progress... |#######             | 035% :               09.8s (E)               28.1s (X)
+     in progress... |########            | 040% :               11.2s (E)               28.1s (X)
+     in progress... |#########           | 045% :               12.6s (E)               28.0s (X)
+     in progress... |##########          | 050% :               13.9s (E)               27.8s (X)
+     in progress... |###########         | 055% :               15.4s (E)               28.0s (X)
+     in progress... |############        | 060% :               16.8s (E)               28.0s (X)
+     in progress... |#############       | 065% :               18.3s (E)               28.1s (X)
+     in progress... |##############      | 070% :               19.5s (E)               27.9s (X)
+     in progress... |###############     | 075% :               20.9s (E)               27.9s (X)
+     in progress... |################    | 080% :               22.5s (E)               28.1s (X)
+     in progress... |#################   | 085% :               23.9s (E)               28.1s (X)
+     in progress... |##################  | 090% :               25.4s (E)               28.3s (X)
+     in progress... |################### | 095% :               26.9s (E)               28.3s (X)
+     in progress... |####################| 100% :               28.5s (E)               28.5s (X)
+     --------------------------------------------------------------------------------------------
+ 
+     --------------------------------------------------------------------------------------------
+     Parallelization for n_pairs
+     --------------------------------------------------------------------------------------------
+     nglob                =           8001
+     nlevel               =              2
+     Min nglob/nlevel     =           4000
+     Max nglob/nlevel     =           4001
+     --------------------------------------------------------------------------------------------
+ 
+     --------------------------------------------------------------------------------------------
+     Applying CHI kernel with PDEP
+     --------------------------------------------------------------------------------------------
+     in progress... |#                   | 005% :               01.8s (E)               37.2s (X)
+     in progress... |##                  | 010% :               03.5s (E)               35.4s (X)
+     in progress... |###                 | 015% :               05.3s (E)               35.5s (X)
+     in progress... |####                | 020% :               07.2s (E)               36.2s (X)
+     in progress... |#####               | 025% :               09.1s (E)               36.4s (X)
+     in progress... |######              | 030% :               11.5s (E)               38.5s (X)
+     in progress... |#######             | 035% :               15.0s (E)               42.9s (X)
+     in progress... |########            | 040% :               17.9s (E)               44.7s (X)
+     in progress... |#########           | 045% :               19.4s (E)               43.2s (X)
+     in progress... |##########          | 050% :               22.0s (E)               44.0s (X)
+     in progress... |###########         | 055% :               24.6s (E)               44.8s (X)
+     in progress... |############        | 060% :               27.6s (E)               46.1s (X)
+     in progress... |#############       | 065% :               30.3s (E)               46.6s (X)
+     in progress... |##############      | 070% :               33.1s (E)               47.4s (X)
+     in progress... |###############     | 075% :               36.4s (E)               48.5s (X)
+     in progress... |################    | 080% :               41.5s (E)               51.9s (X)
+     in progress... |#################   | 085% :               45.5s (E)               53.6s (X)
+     in progress... |##################  | 090% :               47.1s (E)               52.4s (X)
+     in progress... |################### | 095% :               51.3s (E)               54.0s (X)
+     in progress... |####################| 100% :               53.2s (E)               53.2s (X)
+     --------------------------------------------------------------------------------------------
+     WBSE_INIT    :     35.35s CPU   1m22.60s WALL
+
+     wbse_init_re :      0.12s CPU      0.15s WALL (       1 calls)
+     fetch_input  :      0.05s CPU      0.05s WALL (       2 calls)
+     fft          :      0.01s CPU      0.01s WALL (      14 calls)
+     fft_scatter  :      1.34s CPU      1.62s WALL (   16422 calls)
+     init_vloc    :      0.01s CPU      0.01s WALL (       2 calls)
+     init_us_1    :      0.00s CPU      0.00s WALL (       2 calls)
+     v_of_rho     :      0.01s CPU      0.01s WALL (       1 calls)
+     v_xc         :      0.01s CPU      0.01s WALL (       1 calls)
+     v_h          :      0.00s CPU      0.00s WALL (       1 calls)
+     do_setup     :      0.28s CPU      0.40s WALL (       1 calls)
+     init_pw_ar   :      0.27s CPU      0.40s WALL (       1 calls)
+     hinit0       :      0.01s CPU      0.01s WALL (       1 calls)
+     davcio       :      0.00s CPU      0.10s WALL (       6 calls)
+     exx_grid     :      0.00s CPU      0.00s WALL (       1 calls)
+     exxinit      :      0.11s CPU      0.12s WALL (       1 calls)
+     fftcw        :      0.04s CPU      0.04s WALL (     150 calls)
+     exx_div      :      0.00s CPU      0.00s WALL (       1 calls)
+     sqvc_init    :      0.00s CPU      0.00s WALL (       1 calls)
+     tau          :     34.75s CPU     81.75s WALL (       2 calls)
+     fftw         :      2.23s CPU      2.68s WALL (   16258 calls)
+     pdep_write   :      2.85s CPU     25.54s WALL (    8129 calls)
+ 
+     WBSE_INIT    :     35.36s CPU   1m22.61s WALL
+
+ 
+   This run was terminated on:   5: 4:46  13Aug2023            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

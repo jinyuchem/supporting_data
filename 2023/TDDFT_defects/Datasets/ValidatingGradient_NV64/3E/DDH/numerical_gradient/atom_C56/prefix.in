@@ -1,0 +1,36 @@
+&CONTROL
+calculation = 'scf'
+verbosity = 'high'
+tprnfor=.TRUE.
+tstress=.TRUE.
+wf_collect = .true.
+prefix='pwscf'
+outdir = './'
+pseudo_dir='/home/jinyuchem/program/QE/pseudo-potential'
+/
+&SYSTEM
+ibrav = 0
+ecutwfc = 60
+tot_charge = -1
+nspin = 2
+tot_magnetization = 2.0
+nbnd = 150
+nat = 63
+ntyp = 2
+input_dft = 'pbe0'
+exx_fraction = 0.18
+ecutfock = 120
+/
+&ELECTRONS
+conv_thr = 1D-10
+diago_full_acc=.true.
+/
+K_POINTS gamma
+CELL_PARAMETERS angstrom
+7.136000  0.000000  0.000000
+0.000000  7.136000  0.000000
+0.000000  0.000000  7.136000
+ATOMIC_SPECIES
+C  12.01099968  C_ONCV_PBE-1.0.upf
+N  14.00699997  N_ONCV_PBE-1.0.upf
+ATOMIC_POSITIONS crystal

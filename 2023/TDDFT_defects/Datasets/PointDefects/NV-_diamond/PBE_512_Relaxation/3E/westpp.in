@@ -1,0 +1,11 @@
+input_west:
+   qe_prefix: pwscf
+   west_prefix: pwscf
+   outdir: ./
+
+westpp_control:
+   westpp_calculation: CM
+   westpp_n_liouville_to_use: 2
+   westpp_range: [901, 1056]
+   westpp_l_spin_flip: False
+   westpp_l_dipole_realspace: True

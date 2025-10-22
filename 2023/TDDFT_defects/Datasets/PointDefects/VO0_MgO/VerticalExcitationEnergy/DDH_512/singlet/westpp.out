@@ -1,0 +1,210 @@
+MPI startup(): shm:dapl fabric is unknown or has been removed from the product, please use ofi or shm:ofi instead.
+
+     Program WESTPP v. 5.4.0 git rev. qe-7.1 starts on  6Jun2023 at 23:24:57 
+
+     This program is part of the open-source West suite
+     for massively parallel calculations of excited states in materials; please cite
+         "M. Govoni et al., J. Chem. Theory Comput. 11, 2680 (2015);
+          URL http://www.west-code.org", 
+     in publications or presentations arising from this work.
+
+     Based on the Quantum ESPRESSO v. 7.1
+
+     I/O is Little Endian
+ 
+     --------------------------------------------------------------------------------------------
+     **MPI** Parallelization Status
+     --------------------------------------------------------------------------------------------
+                    40                   1             1             1            40
+     --------------------------------------------------------------------------------------------
+                     N         =         I      X      P      X      B      X      Z
+                     ^                   ^             ^             ^             ^
+                     |                   |             |             |             |
+                   #rnk                  |             |             |             |
+                                      #image           |             |             |
+                                                     #pool           |             |
+                                                                   #bgrp           |
+                                                                                 #R&G
+     --------------------------------------------------------------------------------------------
+     **OPENMP** Parallelization Status
+     #thr/rnk               =            1
+     --------------------------------------------------------------------------------------------
+     #prc = (rnk) * (thr) =           40
+     --------------------------------------------------------------------------------------------
+
+     --------------------------------------------------------------------------------------------
+     I/O Summary : input_west
+     --------------------------------------------------------------------------------------------
+     qe_prefix : pwscf
+     west_prefix : pwscf
+     outdir : ./
+     --------------------------------------------------------------------------------------------
+
+     Reading xml data from directory:
+
+     ./pwscf.save/
+     EXX fraction changed:   0.36
+     EXX Screening parameter changed:    0.0000000
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE0
+                           (   6   4   8   4   0   0   0)
+     EXX-fraction              =        0.36
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         478     478    117                49858    49858    6219
+     Max         480     480    120                49872    49872    6232
+     Sum       19157   19157   4785              1994569  1994569  249087
+ 
+     Using Slab Decomposition
+ 
+
+     --------------------------------------------------------------------------------------------
+     I/O Summary : wstat_control
+     --------------------------------------------------------------------------------------------
+     wstat_calculation : S
+     n_pdep_eigen : 4090
+     n_pdep_times : 4
+     n_pdep_maxiter : 100
+     n_dfpt_maxiter : 250
+     n_pdep_read_from_file : 0
+     n_steps_write_restart : 1
+     trev_pdep : 0.001
+     trev_pdep_rel : 0.1
+     tr2_dfpt : 1e-12
+     l_kinetic_only : False
+     l_minimize_exx_if_active : False
+     n_exx_lowrank : 2080
+     l_use_ecutrho : False
+     qlist : [1]
+     --------------------------------------------------------------------------------------------
+
+     --------------------------------------------------------------------------------------------
+     I/O Summary : westpp_control
+     --------------------------------------------------------------------------------------------
+     westpp_calculation : C
+     westpp_range : [2017, 2080]
+     westpp_format : C
+     westpp_sign : False
+     westpp_n_pdep_eigen_to_use : 1
+     westpp_r0 : [0.0, 0.0, 0.0]
+     westpp_nr : 100
+     westpp_rmax : 1.0
+     westpp_epsinfty : 1.0
+     westpp_box : [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+     westpp_n_liouville_to_use : 4
+     westpp_l_spin_flip : False
+     --------------------------------------------------------------------------------------------
+ 
+     --------------------------------------------------------------------------------------------
+     System Overview
+     --------------------------------------------------------------------------------------------
+     gamma_only           =              T
+     ecutwfc [Ry]         =      60.000000
+     ecutrho [Ry]         =     240.000000
+     omega [au^3]         =   3.177010E+04
+     nbnd                 =           2080
+     nkstot               =              1
+     nspin                =              1
+     nelec                =    4090.000000
+     npol                 =              1
+     lsda                 =              F
+     noncolin             =              F
+     lspinorb             =              F
+     --------------------------------------------------------------------------------------------
+
+     3DFFT grid
+        s : ( 160, 160, 160)
+        p : ( 160, 160, 160)
+
+     Direct Lattice Cell [a.u.]
+        a1 = (    31.6718098     0.0000000     0.0000000)
+        a2 = (     0.0000000    31.6718098     0.0000000)
+        a3 = (     0.0000000     0.0000000    31.6718098)
+
+     Reciprocal Lattice Cell [a.u.]
+        b1 = (     0.1983842     0.0000000     0.0000000)
+        b2 = (     0.0000000     0.1983842     0.0000000)
+        b3 = (     0.0000000     0.0000000     0.1983842)
+      
+
+     Brillouin Zone sampling [cryst. coord.]
+ 
+        k(000001) = (     0.0000000     0.0000000     0.0000000)
+ 
+     --------------------------------------------------------------------------------------------
+     Parallelization for nvec
+     --------------------------------------------------------------------------------------------
+     nglob                =              4
+     nlevel               =              1
+     Min nglob/nlevel     =              4
+     Max nglob/nlevel     =              4
+     --------------------------------------------------------------------------------------------
+ 
+     --------------------------------------------------------------------------------------------
+     SAVE read in 13.8s               
+     In location : ./pwscf.wbse.save
+     Eigen. found :            4
+     --------------------------------------------------------------------------------------------
+ 
+     --------------------------------------------------------------------------------------------
+     BSE/TDDFT Excited State De(C)omposition
+     --------------------------------------------------------------------------------------------
+
+      *-------------* THE PRINCIPLE PROJECTED COMPONENTS *-------------*
+
+      #     Exciton : |        1 |   Excitation energy : |     0.311275
+             1        2045                       1           0.992482
+             1        2045                       7           0.106133
+
+      #     Exciton : |        2 |   Excitation energy : |     0.378584
+             1        2045                       2           0.686464
+             1        2045                       3           0.588866
+             1        2045                       4           0.244929
+             1        2045                       8           0.241141
+             1        2045                       9           0.206991
+
+      #     Exciton : |        3 |   Excitation energy : |     0.378584
+             1        2045                       2           0.617215
+             1        2045                       3           0.704023
+             1        2045                       8           0.216948
+             1        2045                       9           0.247313
+
+      #     Exciton : |        4 |   Excitation energy : |     0.378585
+             1        2045                       2           0.160631
+             1        2045                       3           0.188616
+             1        2045                       4           0.903661
+             1        2045                      10           0.317541
+     --------------------------------------------------------------------------------------------
+     WESTPP       :     23.70s CPU     59.14s WALL
+
+     westpp_readi :      0.80s CPU      1.31s WALL (       1 calls)
+     fetch_input  :      0.01s CPU      0.01s WALL (       2 calls)
+     fft          :      0.03s CPU      0.04s WALL (       9 calls)
+     fft_scatter  :      0.02s CPU      0.03s WALL (       9 calls)
+     init_vloc    :      0.04s CPU      0.04s WALL (       2 calls)
+     init_us_1    :      0.01s CPU      0.01s WALL (       2 calls)
+     v_of_rho     :      0.07s CPU      0.15s WALL (       1 calls)
+     v_xc         :      0.07s CPU      0.15s WALL (       1 calls)
+     v_h          :      0.00s CPU      0.00s WALL (       1 calls)
+     do_setup     :     12.68s CPU     34.69s WALL (       1 calls)
+     init_pw_ar   :     12.68s CPU     32.31s WALL (       1 calls)
+     hinit0       :      0.13s CPU      0.13s WALL (       1 calls)
+     davcio       :      0.00s CPU     17.61s WALL (       1 calls)
+     plep_db      :      7.99s CPU     13.89s WALL (       1 calls)
+     plep_read    :      7.84s CPU     13.60s WALL (       4 calls)
+     westpp       :      2.12s CPU      2.14s WALL (       1 calls)
+ 
+     WESTPP       :     23.77s CPU   1m 2.39s WALL
+
+ 
+   This run was terminated on:  23:26: 0   6Jun2023            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

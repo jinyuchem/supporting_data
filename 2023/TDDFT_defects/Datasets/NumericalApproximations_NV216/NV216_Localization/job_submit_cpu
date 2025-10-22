@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#SBATCH --job-name=loc
+#SBATCH --time=06:00:00
+#SBATCH --account=m2460
+#SBATCH --constraint=cpu
+#SBATCH --qos=regular
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=128
+#SBATCH --cpus-per-task=2
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=victor.wz.yu.1012@gmail.com
+
+source /global/homes/v/vwzyu/cpu/perlmutter_cpu.sh
+
+export OMP_NUM_THREADS=1
+export SLURM_CPU_BIND=cores
+export MPICH_MPIIO_HINTS="*:romio_cb_write=enable:romio_ds_write=disable"
+export ROMIO_FSTYPE_FORCE="ufs:"
+
+bin=/global/homes/v/vwzyu/cpu/qe/bin/wbse.x
+
+srun -n 128 $bin -ni 1 -nk 2 -i bse.in > wbse.out
